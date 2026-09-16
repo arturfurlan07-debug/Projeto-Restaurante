@@ -1,38 +1,38 @@
 def relatorio_vendas(pagamentos):
     """
-    Recebe a lista de pagamentos e retorna um resumo:
-    total vendido e total por forma de pagamento.
+    Recebe a Lista de pagamentos e mostra o total vendido e o total
+    separado por forma de pagamento.
     """
-    total_geral = 0.0
-    por_forma = {}
-    for pagamento in pagamentos:
+    total_geral = 0
+    total_por_forma = {}
+
+    for pagamento in pagamentos.obter_todos():
         total_geral += pagamento.valor_total
-        por_forma[pagamento.forma_pagamento] = (
-            por_forma.get(pagamento.forma_pagamento, 0.0) + pagamento.valor_total
-        )
+        if pagamento.forma_pagamento not in total_por_forma:
+            total_por_forma[pagamento.forma_pagamento] = 0
+        total_por_forma[pagamento.forma_pagamento] += pagamento.valor_total
 
     print("===== RELATÓRIO DE VENDAS =====")
     print(f"Total geral vendido: R$ {total_geral:.2f}")
-    for forma, valor in por_forma.items():
-        print(f"  - {forma}: R$ {valor:.2f}")
+    for forma in total_por_forma:
+        print(f"  {forma}: R$ {total_por_forma[forma]:.2f}")
     print("================================")
-    return {"total_geral": total_geral, "por_forma_pagamento": por_forma}
 
 
 def relatorio_consumo(comandas_fechadas):
     """
-    Recebe uma lista/iterável de comandas já fechadas e retorna
-    a quantidade total consumida de cada produto.
+    Recebe a lista de comandas já fechadas (vinda da Pilha de histórico)
+    e mostra quanto foi consumido de cada produto no total.
     """
     consumo_por_produto = {}
+
     for comanda in comandas_fechadas:
-        for item in comanda.itens:
-            consumo_por_produto[item.nome_produto] = (
-                consumo_por_produto.get(item.nome_produto, 0) + item.quantidade
-            )
+        for item in comanda.itens.obter_todos():
+            if item.nome not in consumo_por_produto:
+                consumo_por_produto[item.nome] = 0
+            consumo_por_produto[item.nome] += item.quantidade
 
     print("===== RELATÓRIO DE CONSUMO =====")
-    for nome_produto, quantidade in consumo_por_produto.items():
-        print(f"  - {nome_produto}: {quantidade} unidades")
+    for nome_produto in consumo_por_produto:
+        print(f"  {nome_produto}: {consumo_por_produto[nome_produto]} unidades")
     print("=================================")
-    return consumo_por_produto
