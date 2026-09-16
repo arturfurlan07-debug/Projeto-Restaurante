@@ -1,8 +1,7 @@
-# Projeto Restaurante — Estrutura de Dados / Linguagem de Programação 2
+# Projeto Restaurante Nagasima.
 
 Sistema que simula o atendimento de um restaurante: comandas, estoque,
 pagamentos e relatórios, usando **estruturas de dados próprias**
-(sem usar list, pilha ou fila prontas do Python para as estruturas do problema).
 
 ## Estrutura de pastas
 
@@ -31,7 +30,7 @@ restaurante/
 └── main.py            -> simula o atendimento completo
 ```
 
-## Por que essas estruturas?
+## Por que usei essas estruturas?
 
 - **Lista Encadeada**: usada para os itens de uma comanda (refeições/bebidas
   podem ser adicionados e removidos livremente antes do fechamento) e para
@@ -50,4 +49,4 @@ python main.py
 ```
 
 ## Autor
-Trabalho da disciplina Estrutura de Dados / Linguagem de Programação 2 — Fatec Rio Claro.
+ Artur Furlan — Trabalho da disciplina Estrutura de Dados / Linguagem de Programação 2 — Fatec Rio Claro.
