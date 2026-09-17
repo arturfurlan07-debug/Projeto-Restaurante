@@ -1,16 +1,9 @@
 # Projeto Restaurante Nagasima.
 
-Sistema que simula o atendimento de um restaurante: comandas, estoque,
-<<<<<<< HEAD
-pagamentos e relatórios, usando **estruturas de dados próprias** — sem
-usar list, pilha ou fila prontas do Python para as estruturas do problema.
-=======
-pagamentos e relatórios, usando **estruturas de dados próprias**
->>>>>>> b6fe801a774c8f621b706f38f9f0a8fa7f5f2242
+Sistema que simula o atendimento de um restaurante para a Fatec com comandas, estoque, pagamentos e relatórios.
 
-## Estrutura de pastas
+Estrutura de pastas
 
-```
 restaurante/
 ├── colecoes/          # estruturas de dados genéricas, feitas do zero
 │   ├── no.py              -> Nó usado pelas estruturas encadeadas
@@ -32,12 +25,11 @@ restaurante/
 │   └── relatorios.py       -> relatório de vendas e de consumo
 ├── arquivos_salvos/     -> onde o .pkl é salvo (gerado ao rodar)
 └── main.py              -> simula o atendimento completo
-```
 
-## Por que usei essas estruturas?
 
-- **Lista**: guarda os itens de uma comanda (podem ser adicionados e
-  removidos livremente antes do fechamento) e os produtos do estoque.
+Por que usei essas estruturas?
+
+-**Lista**: guarda os itens de uma comanda (podem ser adicionados e removidos livremente antes do fechamento) e os produtos do estoque.
   A busca do produto certo na hora de dar baixa sempre prioriza o que
   está mais perto do vencimento, percorrendo a lista manualmente.
 - **Fila (FIFO)**: comandas abertas, na ordem em que os clientes chegam.
@@ -52,4 +44,3 @@ python main.py
 ```
 =======
  Artur Furlan — Trabalho da disciplina Estrutura de Dados / Linguagem de Programação 2 — Fatec Rio Claro.
->>>>>>> b6fe801a774c8f621b706f38f9f0a8fa7f5f2242
