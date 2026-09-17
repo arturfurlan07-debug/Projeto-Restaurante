@@ -2,8 +2,9 @@
 
 Sistema que simula o atendimento de um restaurante para a Fatec com comandas, estoque, pagamentos e relatórios.
 
-Estrutura de pastas
+## Estrutura do projeto 
 
+```text
 restaurante/
 ├── colecoes/                  # Estruturas de dados genéricas, feitas do zero
 │   ├── no.py                  # Nó usado pelas estruturas encadeadas
@@ -32,6 +33,7 @@ restaurante/
 │
 ├── main.py                    # Executa a simulação completa do atendimento
 └── .gitignore                 # Arquivos e pastas ignorados pelo Git
+```
 
 Por que usei essas estruturas?
 
