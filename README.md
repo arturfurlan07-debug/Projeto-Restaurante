@@ -50,10 +50,6 @@ restaurante/
 pip install -r requirements.txt
 python main.py
 ```
-
-## Autor
-<<<<<<< HEAD
-Artur Furlan — Trabalho da disciplina Estrutura de Dados / Linguagem de Programação 2 — Fatec Rio Claro.
 =======
  Artur Furlan — Trabalho da disciplina Estrutura de Dados / Linguagem de Programação 2 — Fatec Rio Claro.
 >>>>>>> b6fe801a774c8f621b706f38f9f0a8fa7f5f2242
