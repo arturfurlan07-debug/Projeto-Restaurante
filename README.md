@@ -5,27 +5,33 @@ Sistema que simula o atendimento de um restaurante para a Fatec com comandas, es
 Estrutura de pastas
 
 restaurante/
-├── colecoes/          # estruturas de dados genéricas, feitas do zero
-│   ├── no.py              -> Nó usado pelas estruturas encadeadas
-│   ├── lista.py            -> Lista Encadeada (itens da comanda, estoque)
-│   ├── fila.py             -> Fila FIFO (comandas abertas)
-│   └── pilha.py            -> Pilha LIFO (histórico de comandas fechadas)
-├── entidades/          # classes de dados do domínio
+├── colecoes/                  # Estruturas de dados genéricas, feitas do zero
+│   ├── no.py                  # Nó usado pelas estruturas encadeadas
+│   ├── lista.py               # Lista Encadeada (itens da comanda e estoque)
+│   ├── fila.py                # Fila FIFO (comandas abertas)
+│   └── pilha.py               # Pilha LIFO (histórico de comandas fechadas)
+│
+├── entidades/                 # Classes de dados do domínio
 │   ├── produto.py
 │   ├── item_comanda.py
 │   ├── comanda.py
 │   └── pagamento.py
-├── controle/            # regras de negócio
-│   ├── estoque.py         -> controla produtos, baixa priorizando vencimento
-│   └── restaurante.py     -> junta comandas, estoque e pagamentos
-├── dados/
-│   ├── gerador_aleatorio.py -> gera dados com Faker
-│   └── arquivo_dados.py     -> salva/carrega com pickle
-├── relatorios/
-│   └── relatorios.py       -> relatório de vendas e de consumo
-├── arquivos_salvos/     -> onde o .pkl é salvo (gerado ao rodar)
-└── main.py              -> simula o atendimento completo
-
+│
+├── controle/                  # Regras de negócio
+│   ├── estoque.py             # Controla produtos e baixa priorizando vencimento
+│   └── restaurante.py         # Integra comandas, estoque e pagamentos
+│
+├── dados/                     # Geração e persistência de dados
+│   ├── gerador_aleatorio.py   # Gera dados utilizando Faker
+│   └── arquivo_dados.py       # Salva e carrega dados utilizando pickle
+│
+├── relatorios/                # Geração de relatórios
+│   └── relatorios.py          # Relatórios de vendas e consumo
+│
+├── arquivos_salvos/           # Arquivos .pkl gerados durante a execução
+│
+├── main.py                    # Executa a simulação completa do atendimento
+└── .gitignore                 # Arquivos e pastas ignorados pelo Git
 
 Por que usei essas estruturas?
 
