@@ -37,7 +37,7 @@ restaurante/
 
 Por que usei essas estruturas?
 
--**Lista**: guarda os itens de uma comanda (podem ser adicionados e removidos livremente antes do fechamento) e os produtos do estoque.
+- **Lista**: guarda os itens de uma comanda (podem ser adicionados e removidos livremente antes do fechamento) e os produtos do estoque.
   A busca do produto certo na hora de dar baixa sempre prioriza o que
   está mais perto do vencimento, percorrendo a lista manualmente.
 - **Fila (FIFO)**: comandas abertas, na ordem em que os clientes chegam.
